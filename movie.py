@@ -8,4 +8,4 @@ path = 'file.tsv'
 
 df = pd.read_csv(path, sep='\t', names=column_names)
 
-df.head()
+print(df.head())
