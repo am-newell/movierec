@@ -26,9 +26,9 @@ moviemat = data.pivot_table(index ='user_id',
 ratings.sort_values('num of ratings', ascending = False).head(10)
 
 starwars_user_ratings = moviemat['Star Wars (1977)']
-liarliar_user_ratings = moviemat['Liar Liar (1997)']
+
 similar_to_starwars = moviemat.corrwith(starwars_user_ratings)
-similar_to_liarliar = moviemat.corrwith(liarliar_user_ratings)
+
 
 corr_starwars = pd.DataFrame(similar_to_starwars, columns =['Correlation'])
 corr_starwars.dropna(inplace = True)
