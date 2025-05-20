@@ -29,7 +29,6 @@ starwars_user_ratings = moviemat['Star Wars (1977)']
 
 similar_to_starwars = moviemat.corrwith(starwars_user_ratings)
 
-
 corr_starwars = pd.DataFrame(similar_to_starwars, columns =['Correlation'])
 corr_starwars.dropna(inplace = True)
 corr_starwars.sort_values('Correlation', ascending = False).head(10)
